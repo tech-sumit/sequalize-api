@@ -13,4 +13,7 @@ router.post('/user', require('./module/user/controllers/user').create)
 router.get('/order', require('./module/order/controllers/order').getDetails)
 router.post('/order', require('./module/order/controllers/order').create)
 
+router.get('/item', require('./module/order/controllers/item').getDetails)
+router.post('/item', require('./module/order/controllers/item').create)
+
 module.exports = router

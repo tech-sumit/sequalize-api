@@ -7,11 +7,6 @@ const user = (sequelize, DataTypes) => {
                 as: 'order_username',
                 onDelete: 'CASCADE'
             });
-            User.hasMany(models.OrderItem, {
-                foreignKey: 'username',
-                as: 'orderItem_username',
-                onDelete: 'CASCADE'
-            });
         }
     }
     User.init({
