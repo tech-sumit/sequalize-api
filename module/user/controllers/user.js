@@ -37,10 +37,13 @@ module.exports.getDetails = (request, response) => {
             where: { username: request.body.username },
             include: [{
                 model: Order,
+                as: 'Order',
                 include: [{
                     model: OrderItem,
+                    as: 'OrderItem',
                     include: [{
-                        model: Item
+                        model: Item,
+                        as: 'Item',
                     }]
                 }]
             }]

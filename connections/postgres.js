@@ -14,7 +14,12 @@ Object.keys(models).forEach(key => {
         models[key].associate(models);
     }
 });
-
+// if (process.env.isFirstStart) {
+//     (async () => {
+//         await sequelize.sync({ force: true });
+//         process.env.isFirstStart = false
+//     })();
+// }
 models.sequelize = sequelize;
 models.Sequelize = Sequelize;
 
